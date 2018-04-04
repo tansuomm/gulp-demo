@@ -1,0 +1,61 @@
+{
+  "name": "carinfo",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "hello world"
+  ],
+  "license": "ISC",
+  "ignore": [],
+  "dependencies": {
+    "js-md5": "md5#^0.7.3",
+    "underscore": "^1.8.3",
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "bootstrapvalidator": "^0.5.3",
+    "nprogress": "^0.2.0",
+    "toastr": "^2.1.3"
+  },
+  "overrides": {
+    "jquery":{
+      "main":[
+        "dist/jquery.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css"
+      ]
+    },
+    "nprogress":{
+      "main": [
+        "nprogress.js",
+        "nprogress.css"
+      ]
+    },
+    "bootstrapvalidator":{
+      "main": [
+        "dist/js/bootstrapValidator.js",
+        "dist/css/bootstrapValidator.css"
+      ]
+    },
+    "toastr":{
+      "main": [
+        "toastr.js",
+        "toastr.css"
+      ]
+    },
+    "js-md5":{
+      "main": [
+        "build/md5.min.js"
+      ]
+    },
+    "underscore":{
+      "main": [
+        "underscore.js"
+      ]
+    }
+
+  }
+}

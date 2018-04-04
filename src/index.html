@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Page</title>
+    <!-- bower:css -->
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="lib/bootstrapvalidator/dist/css/bootstrapValidator.css">
+    <link href="lib/toastr/toastr.css" rel="stylesheet">
+    <!-- endinject -->
+
+    <!-- app:css -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- endinject -->
+</head>
+
+<body>
+    <!-- search section -->
+    <section class="section slider bg-blue">
+        <button id="btn-login" type="button" class="btn-login btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            <span id="login-text">登录</span>
+        </button>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="block">
+                        <!-- Heading -->
+                        <h1>车辆基本信息查询</h1>
+                        <!-- Sub-heading -->
+                        <h3></h3>
+                        <!-- Form -->
+                        <select id="inputHpzl" class="form-control download">
+                            <option>号牌种类</option>
+                            <option value="02">小型汽车</option>
+                            <option value="01">大型汽车</option>
+                            <option value="24">警用摩托</option>
+                            <option value="03">使馆汽车</option>
+                            <option value="04">领馆汽车</option>
+                            <option value="05">境外汽车</option>
+                            <option value="06">外籍汽车</option>
+                            <option value="07">普通摩托车</option>
+                            <option value="08">轻便摩托车</option>
+                            <option value="09">使馆摩托车</option>
+                            <option value="10">领馆摩托车</option>
+                            <option value="11">境外摩托车</option>
+                            <option value="12">外籍摩托车</option>
+                            <option value="13">低速车</option>
+                            <option value="14">拖拉机</option>
+                            <option value="15">挂车</option>
+                            <option value="16">教练汽车</option>
+                            <option value="17">教练摩托车</option>
+                            <option value="20">临时入境汽车</option>
+                            <option value="21">临时入境摩托车</option>
+                            <option value="22">临时行驶车</option>
+                            <option value="23">警用汽车</option>
+                        </select>
+                        <input type="text" id="inputHphm" class="form-control carhphm" aria-describedby="inputHphm" placeholder="车牌号码: 如川A5W5R1">
+                        <!-- Image -->
+                        <div class="image-content">
+                            <img class="img-fluid" src="images/car.png" alt="iphone-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- result section -->
+    <section id="result-data" class="feature section bg-blue d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mr-auto justify-content-center align-self-center">
+                    <div class="feature-content">
+                        <table class="table table-bordered text-light">
+                            <tbody>
+                              <tr>
+                                <td style="width: 20%;">号牌种类</td>
+                                <td style="width: 30%;" data-pro='hpzl'></td>
+                                <td style="width: 20%;">号牌号码</td>
+                                <td data-pro='hphm'></td>
+                              </tr>
+                              <tr>
+                                <td>中文品牌</td>
+                                <td data-pro='clpp1'></td>
+                                <td>车辆型号</td>
+                                <td data-pro='clxh'></td>
+                              </tr>
+                              <tr>
+                                <td>车辆识别代号</td>
+                                <td data-pro='clsbdh'></td>
+                                <td>发动机号</td>
+                                <td data-pro='fdjh'></td>
+                              </tr>
+                              <tr>
+                                <td>车辆类型</td>
+                                <td data-pro='cllx'></td>
+                                <td>车身颜色</td>
+                                <td data-pro='csys'></td>
+                              </tr>
+                              <tr>
+                                <td>使用性质</td>
+                                <td data-pro='syxz'></td>
+                                <td>机动车所有人</td>
+                                <td data-pro='syr'></td>
+                              </tr>
+                              <tr>
+                                <td>初次登记日期</td>
+                                <td data-pro='ccdjrq'></td>
+                                <td>检验有效期止</td>
+                                <td data-pro='yxqz'></td>
+                              </tr>
+                              <tr>
+                                <td>强制报废期止</td>
+                                <td data-pro='qzbfqz'></td>
+                                <td>机动车状态</td>
+                                <td data-pro='zt'></td>
+                              </tr>
+                              <tr>
+                                <td>发动机型号</td>
+                                <td data-pro='fdjxh'></td>
+                                <td>燃料种类</td>
+                                <td data-pro='rlzl'></td>
+                              </tr>
+                              <tr>
+                                <td>排量</td>
+                                <td data-pro='pl'></td>
+                                <td>功率</td>
+                                <td data-pro='gl'></td>
+                              </tr>
+                              <tr>
+                                <td>轴数</td>
+                                <td data-pro='zs'></td>
+                                <td>轴距</td>
+                                <td data-pro='zj'></td>
+                              </tr>
+                              <tr>
+                                <td>前轮距</td>
+                                <td data-pro='qlj'></td>
+                                <td>后轮距</td>
+                                <td data-pro='hlj'></td>
+                              </tr><tr>
+                                <td colspan="2">总质量</td>
+                                <td colspan="2" data-pro='zzl'></td>
+                              </tr>
+                            </tbody>
+                          </table> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- login dialog -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">登录查询平台</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="recipient-account" class="col-form-label">账号:</label>
+                            <input type="text" required name="account" class="form-control" id="recipient-account">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-pwd" class="col-form-label">密码:</label>
+                            <input type="password" required name="password" class="form-control" id="recipient-pwd">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-submit" name="submit" type="submit" class="btn btn-primary">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bower:js -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/bootstrapValidator/dist/js/bootstrapValidator.js"></script>
+    <script src="lib/js-md5/build/md5.min.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <!-- endinject -->
+
+    <!-- app:js -->
+    <script src="js/custom.js"></script>
+     <!-- endinject -->
+</body>
+
+</html>

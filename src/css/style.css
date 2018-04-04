@@ -1,0 +1,194 @@
+/*=== MEDIA QUERY ===*/
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 61px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+p, a, li, blockquote, label {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25px;
+  color: #808080;
+  margin-bottom: 0;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgba(196, 196, 196, 0.38);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(183, 183, 183, 0.67);
+  border-radius: 10px;
+}
+cite {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-style: italic;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #808080;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+ul.app-badge {
+  margin-bottom: 60px;
+}
+
+a:focus, a:hover {
+  color: #2e7eed;
+  text-decoration: none;
+}
+
+.bg-blue {
+  background: #2e7eed;
+}
+
+
+.section {
+  min-height: 100vh;
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  font-size: 35px;
+  margin-bottom: 13px;
+}
+
+.section-title p {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .section-title p {
+    width: 100%;
+  }
+}
+
+.form-control.main {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}
+
+.form-control.main:focus {
+  border: 1px solid #2e7eed;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #808080;
+  font-size: 14px;
+}
+
+
+.btn-login {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+.btn-white {
+  background: white;
+  color: #2e7eed;
+}
+
+
+.slider {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .block {
+  position: relative;
+}
+
+.slider .block h1, .slider .block h3 {
+  color: #fff;
+}
+.slider .block h3{
+  height: 30px;
+}
+.slider .block .download {
+  width: 220px;
+  margin: 20px auto;
+}
+.slider .block .carhphm {
+  width: 0;
+  opacity: 0;
+  margin: 0 auto;
+}
+.slider .block .image-content {
+  text-align: center;
+}
+
+.slider .block .image-content img {
+  margin-top: 110px;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 290px solid #fff;
+  border-left: 2000px solid transparent;
+  width: 0;
+}
+
+.feature .feature-content h2, .feature .feature-content p {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .feature .feature-content h2, .feature .feature-content p {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=maps/style.css.map */
